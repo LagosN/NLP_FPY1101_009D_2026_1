@@ -115,3 +115,22 @@ def mostrar_paciente():
     print(f"Temperatura: {pacientes['temperatura']}")
     print(f"\n Estado: {pacientes['estado']}")
 
+def menu():
+    while True:
+        opc = int(input("Ingrese una de las opciones"))
+        if opc == 1:
+            agregar_paciente(pacientes)
+        elif opc == 2:
+            buscar_paciente_lista()
+        elif opc == 3:
+            eliminar_paciente()    
+        elif opc == 4:
+            actualizar_estado(pacientes)
+        elif opc == 5:
+            actualizar_estado(pacientes)
+            mostrar_paciente()
+        elif opc == 6:
+            print("Gracias por usar el programa")
+            break   
+        
+menu()
